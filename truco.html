@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1C4A3E">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Truco — Placar de Mesa</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231C4A3E'/><text y='24' x='16' font-size='20' text-anchor='middle'>%E2%99%A0</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Inter:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+
+<!-- ===================== SETUP ===================== -->
+<main class="shell" id="tela-setup" hidden>
+
+  <header class="topo">
+    <a class="btn-voltar" href="index.html" aria-label="Voltar ao menu">&larr;</a>
+    <h1 class="topo__titulo">Truco</h1>
+  </header>
+
+  <section class="painel">
+    <h2 class="painel__titulo">Quantos times?</h2>
+    <div class="contador-qtd">
+      <button type="button" class="btn-redondo" id="menos-times" aria-label="Menos um time">−</button>
+      <input class="entrada entrada--numero" id="qtd-times" type="number" inputmode="numeric"
+             step="1" min="2" max="12" value="2" aria-label="Quantidade de times">
+      <button type="button" class="btn-redondo" id="mais-times" aria-label="Mais um time">+</button>
+    </div>
+    <p class="painel__nota">O comum é 2 times ("Nós" e "Eles"), mas dá pra marcar mais.</p>
+  </section>
+
+  <section class="painel">
+    <h2 class="painel__titulo">Nome dos times</h2>
+    <div class="lista-nomes" id="nomes-times"></div>
+    <button type="button" class="btn btn--principal btn--bloco" id="iniciar-truco">Começar partida</button>
+  </section>
+
+</main>
+
+<!-- ===================== JOGO ===================== -->
+<main class="shell shell--com-barra" id="tela-jogo" hidden>
+
+  <header class="topo">
+    <a class="btn-voltar" href="index.html" aria-label="Voltar ao menu">&larr;</a>
+    <h1 class="topo__titulo">Truco</h1>
+    <button type="button" class="btn btn--fantasma btn--pequeno" id="editar-times">Times</button>
+  </header>
+
+  <div id="lista-times"></div>
+
+  <p class="painel__nota" style="color:rgba(241,230,208,.6);text-align:center;padding:0 8px">
+    Toque em <strong>+1 / +2 / +3</strong> pra marcar. Errou? Use o <strong>−1</strong> ou o desfazer.
+  </p>
+
+</main>
+
+<div class="barra-acoes" id="barra-jogo" hidden>
+  <div class="barra-acoes__interno">
+    <button type="button" class="btn btn--madeira btn--largo" id="desfazer">↺ Desfazer</button>
+    <button type="button" class="btn btn--perigo" id="reiniciar">Reiniciar</button>
+  </div>
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/truco.js"></script>
+</body>
+</html>

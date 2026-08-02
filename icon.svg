@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Placar de Mesa">
+  <rect width="512" height="512" fill="#1C4A3E"/>
+  <g transform="rotate(-8 256 268)">
+    <rect x="146" y="120" width="220" height="300" rx="26" fill="#F1E6D0" stroke="#6B4226" stroke-width="12"/>
+    <path d="M256 176c-34 44-62 66-62 96a62 62 0 0 0 124 0c0-30-28-52-62-96Z" fill="#B23A2E"/>
+    <rect x="216" y="330" width="80" height="14" rx="7" fill="#6B4226"/>
+    <g fill="#8A8D91">
+      <ellipse cx="212" cy="378" rx="18" ry="14"/>
+      <ellipse cx="256" cy="378" rx="18" ry="14"/>
+      <ellipse cx="300" cy="378" rx="18" ry="14"/>
+    </g>
+  </g>
+</svg>
