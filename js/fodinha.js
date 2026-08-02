@@ -234,8 +234,8 @@
     el.hidden = false;
     el.className = 'aviso-soma' + (ok ? ' aviso-soma--ok' : '');
     el.innerHTML = ok
-      ? 'Vazas feitas: <strong>' + somaFeitas + '</strong> de ' + r.numeroCartas + ' — bate certinho. Apostas somam ' + somaApostas + '.'
-      : 'Vazas feitas somam <strong>' + somaFeitas + '</strong>, mas a rodada tem <strong>' + r.numeroCartas + '</strong>. ' +
+      ? 'Mão(s) feitas: <strong>' + somaFeitas + '</strong> de ' + r.numeroCartas + ' — bate certinho. Apostas somam ' + somaApostas + '.'
+      : 'Mão(s) feitas somam <strong>' + somaFeitas + '</strong>, mas a rodada tem <strong>' + r.numeroCartas + '</strong>. ' +
         'Confira antes de fechar. (Apostas somam ' + somaApostas + '.)';
   }
 
@@ -286,8 +286,8 @@
 
     if (somaFeitas !== r.numeroCartas) {
       UI.confirmar(
-        'As vazas não fecham',
-        'Foram marcadas ' + somaFeitas + ' vazas, mas a rodada tem ' + r.numeroCartas +
+        'As Mão(s) não fecham',
+        'Foram marcadas ' + somaFeitas + ' Mão(s), mas a rodada tem ' + r.numeroCartas +
         '. Quer fechar assim mesmo?',
         { confirmar: 'Fechar assim mesmo', perigo: false }
       ).then(function (ok) { if (ok) aplicar(); });
